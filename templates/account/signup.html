@@ -11,20 +11,20 @@
         padding: 20px; box-shadow: 5px 5px rgba(192, 192, 192, 0.61);" 
         >
 
-                <h2 class="text-center">Sing-up</h2>
+                <h2 class="text-center font-weight-bold">Cadastro</h2>
                 <hr>
                 <form method="post">
                     {% csrf_token %}
                     {{ form|crispy }}
                     <div class="text-center">
-                        <button class="btn btn-primary" type="submit">Sign-up</button>
+                        <button class="btn btn-warning font-weight-bold text-light" type="submit">cadastrar</button>
                         <hr>
                         <div class="pt-3">
                             <a class="p-2" href="{% provider_login_url 'google' %}" 
                             
                             style="text-decoration: none; border: 1px silver solid;border-radius: 10px; color: rgb(100, 99, 99); font-weight: 500;"
                             
-                            ><i class="fa-brands fa-google text-danger"></i> Sing in with Google</a>
+                            >Entre com o <i class="fa-brands fa-google text-danger"></i>oogle</a>
                         </div>
                     </div>
                 </form>

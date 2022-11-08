@@ -16,12 +16,12 @@
     
     
     <h1 class="text-center">{% blocktrans with provider.name as provider %}
-        Sign In Via {{ provider }}
+        Entre com  {{ provider }}
         {% endblocktrans %}
     </h1>
     <hr>
     
-    <p class="text-center" style="font-weight: 500;">{% blocktrans with provider.name as provider %} about to sign in using a third party account from {{ provider }}.{% endblocktrans %}</p>
+    <p class="text-center" style="font-weight: 500;">{% blocktrans with provider.name as provider %} Você está prestes a fazer login usando uma conta {{ provider }}.{% endblocktrans %}</p>
 </div>
 {% endif %}
 
