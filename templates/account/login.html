@@ -8,9 +8,11 @@
 {% block content %}
         <div class='box_login'>
     
-            <div class=" loguin col "
-            >
-                    <h2 class="text-center text-warning font-weight-bold"><font color="#c15429">Action</font><font color="#0e2334">.System</font></h2>
+            <div class=" loguin col ">
+                <div>
+                    <img class="imagem_loguin" src="{% static 'img/Simbolo_01.png'%}" alt="logo">
+                </div>
+                    <h2 class="titulo_login text-center text-warning"><font color="#c15429"><strong>Action</strong></font><font color="#0e2334"> Group</font></h2>
                     <hr>
                     <form method="post" >
                         <!--formulario no modelo da biblioteca crispy-->
@@ -25,11 +27,11 @@
                             <!--<a href="{% url 'account_signup' %}" class="btn btn-primary font-weight-bold " role="button" aria-disabled="true">cadastrar</a>-->
                             <br>
                             <hr>
-                            <a class='botao_reset_senha' href="{% url 'account_reset_password' %}">Forgot password?</a>
+                            <a class='botao_reset_senha' href="{% url 'account_reset_password' %}">esqueceu a senha?</a>
                             <div class="mt-5">
                                 <a class=" botao_login_google mt-2" href="{% provider_login_url 'google' %}"
     
-                                ><i class="fa-brands fa-google text-danger"></i> | Sing in with Google</a>
+                                ><i class="fa-brands fa-google text-danger"></i> | Entre com o google</a>
                             </div>
                             
                         </div>
@@ -39,3 +41,12 @@
          </div>
 
 {% endblock %}
+
+<!--<i class="fa-brands fa-google text-danger"></i>
+    
+    
+    
+    
+    
+    
+    ->

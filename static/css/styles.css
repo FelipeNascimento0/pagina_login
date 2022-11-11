@@ -1,3 +1,16 @@
+body{
+    background-image: url(/static/img/Home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+
+.image_menu{
+    height: 40px;
+    width: 50px;
+}
+
 .box_login{
     height: 100vh;
     width: 450px;
@@ -8,12 +21,12 @@
     height:100vh;
     border: 1px silver solid ; 
     border-radius:10px;
-    padding: 130px 40px 0px 40px;
+    padding: 30px 40px 0px 40px;
     box-shadow: 5px 5px rgba(192, 192, 192, 0.61);
 }
 
 .botao_logar {
-    background-color: rgb(70, 182, 235) ;
+    background-color: rgb(221, 84, 30);
     color: white;
     font-weight: bold;
     font-size: 20px;
@@ -27,7 +40,7 @@
     text-decoration: none;
     text-align: left;
     display: block;
-    margin-top: 30px;
+    margin-top: 10px;
     height: 40px;
     width: 100%; 
     border: 1px silver solid;
@@ -38,12 +51,28 @@
     padding:5px 0px 0px 5px ;
 
 }
+.botao_login_google:hover{
+    text-decoration: none;
+    color:rgb(100, 99, 99);
+    border: 1px rgb(134, 212, 243) solid
+}
 
 .botao_reset_senha {
     text-decoration: none;
     display: block;
     text-align: right;
     padding: 0px;
+}
+
+.titulo_login{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.imagem_loguin{
+    display: block;
+    height: 100px;
+    width: 100px;
+    margin: auto;
 }
 
 
@@ -59,12 +88,12 @@
     height:100vh;
     border: 1px silver solid ; 
     border-radius:10px;
-    padding: 230px 40px 0px 40px;
+    padding: 30px 40px 0px 40px;
     box-shadow: 5px 5px rgba(192, 192, 192, 0.61);
     }
     
 .botao_logar {
-    background-color: rgb(70, 182, 235) ;
+    background-color: rgb(221, 84, 30) ;
     color: white;
     font-weight: bold;
     font-size: 20px;
@@ -88,6 +117,11 @@
     font-weight: 500;
     padding:5px 0px 0px 5px ;
     
+    }
+.botao_login_google:hover{
+        text-decoration: none;
+        color:rgb(100, 99, 99);
+        border: 1px rgb(134, 212, 243) solid
     }
     
 .botao_reset_senha {
