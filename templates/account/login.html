@@ -1,41 +1,41 @@
 {% extends 'base.html' %}
-
-
-
+{% load static %}
 {% load crispy_forms_tags %}
 {% load account socialaccount %}
 
 {% block title %}Login{% endblock %}
 
 {% block content %}
-
-        <div class="col-md-4 mx-auto" style="border: 1px silver solid ; border-radius:10px;
-        padding: 20px; box-shadow: 5px 5px rgba(192, 192, 192, 0.61); " 
-        >
-
-                <h2 class="text-center text-warning font-weight-bold">Action.System</h2>
-                <hr>
-                <form method="post" >
-                    {% csrf_token %}
-                    {{ form|crispy }}
-                    <div class="text-center">
-
-                        <button class="btn btn-warning font-weight-bold text-light" type="submit">Logar</button>
-                        <a href="{% url 'account_signup' %}" class="btn btn-primary font-weight-bold " role="button" aria-disabled="true">cadastrar</a>
-                        <br>
-                        <div class="pt-3">
-                            <a class="p-2" href="{% provider_login_url 'google' %}" 
+        <div class='box_login'>
+    
+            <div class=" loguin col "
+            >
+                    <h2 class="text-center text-warning font-weight-bold"><font color="#c15429">Action</font><font color="#0e2334">.System</font></h2>
+                    <hr>
+                    <form method="post" >
+                        <!--formulario no modelo da biblioteca crispy-->
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <div class="text-center">
+    
+                            <button class=" botao_logar" type="submit">Logar</button>
+                            <!--as urls dos botões desse formulario fazem parte da biblioteca allauth-->
                             
-                            style="text-decoration: none; border: 1px silver solid;border-radius: 10px; color: rgb(100, 99, 99); font-weight: 500;"
                             
-                            ><i class="fa-brands fa-google text-danger"></i> Sing in with Google</a>
+                            <!--<a href="{% url 'account_signup' %}" class="btn btn-primary font-weight-bold " role="button" aria-disabled="true">cadastrar</a>-->
+                            <br>
+                            <hr>
+                            <a class='botao_reset_senha' href="{% url 'account_reset_password' %}">Forgot password?</a>
+                            <div class="mt-5">
+                                <a class=" botao_login_google mt-2" href="{% provider_login_url 'google' %}"
+    
+                                ><i class="fa-brands fa-google text-danger"></i> | Sing in with Google</a>
+                            </div>
+                            
                         </div>
-                        <hr>
-                        <a href="{% url 'account_reset_password' %}" style="text-decoration: none;">Forgot password?</a>
-                        
-                    </div>
-                </form>
-
-        </div>
+                    </form>
+                
+            </div>
+         </div>
 
 {% endblock %}
