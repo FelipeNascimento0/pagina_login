@@ -1,34 +1,32 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% load crispy_forms_tags %}
 {% load account socialaccount %}
 
 {% block title %}Sign-Up{% endblock %}
 
 {% block content %}
-
-        <div class="col-md-4 mx-auto" style="border: 1px silver solid ; border-radius:10px;
-        padding: 20px; box-shadow: 5px 5px rgba(192, 192, 192, 0.61);" 
-        >
-
-                <h2 class="text-center font-weight-bold">Cadastro</h2>
-                <hr>
-                <form method="post">
-                    {% csrf_token %}
-                    {{ form|crispy }}
-                    <div class="text-center">
-                        <button class="btn btn-warning font-weight-bold text-light" type="submit">cadastrar</button>
-                        <hr>
-                        <div class="pt-3">
-                            <a class="p-2" href="{% provider_login_url 'google' %}" 
-                            
-                            style="text-decoration: none; border: 1px silver solid;border-radius: 10px; color: rgb(100, 99, 99); font-weight: 500;"
-                            
-                            >Entre com o <i class="fa-brands fa-google text-danger"></i>oogle</a>
+        
+            <div class="box_login" >
+                    <div class="loguin col">
+                        <div>
+                            <img class="imagem_loguin" src="{% static 'img/Simbolo_01.png'%}" alt="logo">
                         </div>
+                        <h2 class="titulo_login text-center text-warning"><font color="#c15429"><strong>Action</strong></font><font color="#0e2334"> Group</font></h2>
+                        <hr>
+                        <form method="post">
+                            {% csrf_token %}
+                            {{ form|crispy }}
+                            <div class="text-center">
+                                <button class="botao_logar" type="submit">cadastrar</button>
+                                <hr>
+                                <div class="pt-3">
+                                    <a class="botao_login_google mt-5" href="{% provider_login_url 'google' %}"
+                                    ><i class="fa-brands fa-google text-danger"></i> | Entre com o google</a>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                </form>
-
-        </div>
+            </div>
 
 {% endblock %}

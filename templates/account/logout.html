@@ -1,17 +1,24 @@
 {% extends 'base.html' %}
+{% load static %}
 
 
 
 {% block title %}Logout{% endblock %}
 
 {% block content %}
-    <h2>Logout</h2>
-    <p>Do you really want to go out?</p>
-    <form method="post" action="{% url 'account_logout' %}">
-        {% csrf_token %}
-        <button class="btn btn-danger" type="submit">Logout</button>
-
-    </form>
+    <div class="box_login">
+        <div class="loguin col">
+            <div>
+                <img class="imagem_loguin" src="{% static 'img/Simbolo_01.png'%}" alt="logo">
+            </div>
+            <h2 class="text-center"><font color="#c15429"><strong>Sair da</strong></font><font color="#0e2334"> conta</font></h2>
+            <p class="text-center">Deseja mesmo sair?</p>
+            <form method="post" action="{% url 'account_logout' %}">
+                {% csrf_token %}
+                <button class="botao_logar" type="submit">sim</button>
+            </form>
+        </div>
+    </div>
 
 
 {% endblock %}
